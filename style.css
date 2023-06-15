@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+.intro{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: ease 0.2s;
+    transition-delay: 2s;
+    opacity: 0;
+}
+
+.intro .logo{
+    color : black
+}
+
+.intro.visible{
+    visibility: visible;
+    opacity: 1;
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+nav{
+    box-sizing: border-box;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    flex-wrap: nowrap;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+}
+
+nav:hover::after{
+    transform: translateY(0%);
+}
+
+nav:has(input:focus):after{
+    transform: translateY(0%);
+}
+
+nav::after{
+    transition: ease 0.2s;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.logo{
+    color:white;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Righteous', cursive;
+}
+
+.logo::after{
+    content:"iscovira"
+}
+
+body{
+    margin: 0;
+}
+
+#set-height{
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+
+#v0 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    width: 240px;
+    max-width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+.search svg{
+    min-width: 16px;
+    width: 16px;
+    fill: white;
+    margin-bottom: 4px;
+}
+
+.search input{
+    box-sizing: border-box;
+    padding: 0px 6px 5px 0;
+    font-size: 16px;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: white;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to left, transparent 5%, black 20%);
+    mask-image: linear-gradient(to left, transparent 5%, black 20%);
+}
+
+.search input::placeholder{
+    color: white;
+}
+
+.link-list{
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.link-list a{
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    color: black;
+    display: none;
+}
+
+.link-list a.active{
+    display: block;
+}
+
+.link-list a:hover{
+    background-color: black;
+    color: white;
+}
+
+.link-list a::after{
+    content: ">";
+    position: absolute;
+    right: 25px;
+    opacity: 0;
+    color: white;
+    transition: ease 0.4s;
+}
+
+.link-list a:hover::after{
+    opacity: 1;
+    right: 10px;
+}
+
+.screen1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 5%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: ease 1s;
+}
+
+.loaded .screen1{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loaded .screen1 h1{
+    scale: 1;
+    transition-delay: 1s;
+    opacity: 1;
+    margin-bottom: 1em;
+}
+
+.screen1 h1{
+    opacity: 0;
+    scale: 0.95;
+    transition: ease 1s;
+}
+
+h1, .screen2 p {
+    line-height: 1em;
+    color: white;
+    font-size: calc(16px + 5vw);
+    font-weight: 600;
+    text-align: center;
+    margin : 0;
+}
+
+.loaded .screen1 .button{
+    transition-property: opacity;
+    transition-delay: 2s;
+    opacity: 1;
+}
+
+.button{
+    padding: 0;
+    width: 200px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: opacity ease 1s;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.button:hover{
+    color: black;
+}
+
+.button::before{
+    transform: translateX(-100%);
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 60px;
+    background-color: white;
+    transition: ease 0.2s;
+}
+
+.button:hover::before{
+    transform: translateX(0%);
+}
+
+.content{
+    width: 100%;
+    min-height: 11000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20vw 5%;
+    display: flex;
+    gap: 20vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.gallery .row{
+    max-width: calc(1000px + 10vw);
+    margin: 0;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: calc(16px + 5vw) 0;
+}
+
+
+.gallery .row:nth-child(2n), .row.right{
+    justify-content: flex-end;
+}
+
+.row.center{
+    justify-content: center;
+}
+
+.row a{
+    z-index: 3;
+    max-width: 100%;
+    max-height: 150vw;
+    width: calc(500px + 5vw);
+    height: calc(750px + 5vw);
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.row a:hover img{
+    scale: 1.02;
+    opacity: 1;
+}
+
+.row a:hover span{
+    opacity: 1;
+}
+
+.row img{
+    width: 100%;
+    height: 100%;
+    transition: ease 1s;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.row span{
+    max-width: calc(100% - 40px);
+    display: flex;
+    column-gap: 8px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    opacity: 0;
+    transition: ease 0.2s;
+}
+
+.row span p{
+    display: block;
+    width: fit-content;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    text-align: right;
+}
+
+.row span svg{
+    min-width: 16px;
+    width: 16px;
+    fill: white;
+}
+
+.screen2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+}
+
+.screen2 a{
+    color: white;
+    transition: ease 0.2s;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.screen2 a:hover{
+    opacity: 0.7;
+}
+
+
+.floating {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: all ease 0.1s, opacity 0.2s ease;
+}
+
+p:hover .floating{
+    opacity: 1;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.banner img{
+    z-index: -1;
+    width: 100%;
+    height: 70vh;
+    opacity: 0;
+    object-position: center center;
+    object-fit: cover;
+    scale: 1;
+    transition-delay: 1.5s;
+    transition: cubic-bezier(.49,.01,0,1) 5s;
+}
+
+.loaded .banner img{
+    scale: 1.1;
+    opacity: 1;
+}
+
+.banner h1{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition-delay: 1.5s;
+    transition: cubic-bezier(.49,.01,0,1) 4s;
+    opacity: 0;
+    scale: 0.9;
+}
+
+.loaded .banner h1{
+    opacity: 1;
+    scale: 1;
+}
+
+.destinations section{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20vw 5%;
+    opacity: 0;
+    transition: ease 1s;
+    transition-delay: 2s;
+}
+
+.destinations.loaded section{
+    opacity: 1;
+}
+
+.destinations section.right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.destinations section.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destinations section h2{
+    line-height: 1em;
+    font-size: calc(16px + 5vw);
+    font-weight: 600;
+    margin : 0 0 calc(8px + 2.5vw) 0;
+}
+
+.destinations section p{
+    max-width: 100%;
+    width: calc(500px + 5vw);
+}
+
+.destinations section.black{
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width : 1024px) {
+
+    .row a img{
+        opacity: 1;
+    }
+
+    .row a:hover img{
+        scale: 1;
+    }
+    
+    .row a span{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width : 440px) {
+    .logo::after{
+        content: ".";
+    }
+}

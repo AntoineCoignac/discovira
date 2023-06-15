@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovira - Votre voyage virtuel en un clic</title>
+    <meta name="description" content="Votre application de tourisme virtuel, des voyages virtuels gratuits partout dans le monde sur Discovira.">
+    <link rel="shortcut icon" href="/img/fav.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <div class="intro visible">
+        <a class="logo" href="">D</a>
+    </div>
+    <nav>
+        <a class="logo" href="/">D</a>
+        <div class="search">
+            <input type="text" placeholder="Où souaitez-vous aller ?">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
+            <div class="link-list">
+                <a href="/destinations/bali" id="bali">Bali</a>
+                <a href="/destinations/berlin/" id="berlin">Berlin</a>
+                <a href="/destinations/marrakech" id="marrakech">Marrakech</a>
+                <a href="/destinations/montreal/" id="montreal">Montréal</a>
+                <a href="/destinations/moscou/" id="moscou">Moscou</a>
+                <a href="/destinations/newyork/" id="newyork">New York</a>
+                <a href="/destinations/rio/" id="rio">Rio</a>
+                <a href="/destinations/sydney/" id="sydney">Sydney</a>
+            </div>
+        </div>
+    </nav>
+    <div id="set-height">
+        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload">
+            <source type="video/mp4" src="/img/video.mp4">
+            </source>
+        </video>
+        <div class="content">
+            <div class="screen1">
+                <h1>Votre voyage virtuel<br>en un clic.<br></h1>
+                <a href="#gallery" class="button">Explorer</a>
+            </div>
+            <div class="gallery" id="gallery">
+                <div class="row">
+                    <a href="/destinations/montreal/">
+                        <span>
+                            <p>Visiter Montréal</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+                        </span>
+                        <img src="img/montreal-min.jpg"  alt="">
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="/destinations/sydney/">
+                        <span>
+                            <p>Visiter Sydney</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+                        </span>
+                        <img src="img/sydney-min.jpg"  alt="">
+                    </a>
+                </div>
+    
+                <div class="row">
+                    <a href="/destinations/rio/">
+                        <span>
+                            <p>Visiter Rio</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+                        </span>
+                        <img src="img/rio-min.jpg"  alt="">
+                    </a>
+                </div>
+    
+                <div class="row">
+                    <a href="/destinations/marrakech/">
+                        <span>
+                            <p>Visiter Marrakech</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+                        </span>
+                        <img src="img/marrakech-min.jpg"  alt="">
+                    </a>
+                </div>
+    
+                <div class="row">
+                    <a href="/destinations/berlin/">
+                        <span>
+                            <p>Visiter Berlin</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+                        </span>
+                        <img src="img/berlin-min.jpg"  alt="">
+                    </a>
+                </div>
+    
+            </div>
+            <div class="screen2">
+                <p>
+                    Découvrez <a id="newyork" href="/destinations/newyork">New York</a>, <a id="bali" href="/destinations/bali">Bali</a> ou encore <a id="moscou" href="/destinations/moscou">Moscou</a> sans rien dépenser.
+                    <img id="floating" width="150px" height="150px" class="floating" src="img/newyork-min.jpg" alt="">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        ScrollReveal().reveal('.row', {
+            distance: '50px',
+            duration: 1000,
+            delay: 500
+        });
+        ScrollReveal().reveal('.screen2', {
+            distance: '50px',
+            duration: 1000,
+            delay: 500
+        });
+    </script>
+</body>
+
+</html>
